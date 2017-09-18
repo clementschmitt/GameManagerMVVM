@@ -27,11 +27,10 @@ namespace GameManagerMVVM
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var c = (this.DataContext as Client);
+            var c = (this.DataContext as JV);
 
             c.Age = 0;
             c.Prix = 0;
-            c.Type = "";
             c.Genre = "";
             c.Nom = "";
         }

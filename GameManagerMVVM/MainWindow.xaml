@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.DataContext>
-        <local:Client></local:Client>
+        <local:FicheJVViewModel></local:FicheJVViewModel>
     </Window.DataContext>
     <Grid>
         <Grid.Resources>
@@ -33,7 +33,6 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -41,25 +40,30 @@
             <ColumnDefinition Width="5"/>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Interface d'édition</Label>
         <Label Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Jeu vidéo</Label>
+        <Label Grid.Column="5" Grid.Row="0" Grid.ColumnSpan="2">Fiches JV</Label>
         <Label Grid.Row="1" Grid.Column="0">Nom :</Label>
         <Label Grid.Row="2" Grid.Column="0">Genre :</Label>
-        <Label Grid.Row="3" Grid.Column="0">Type :</Label>
-        <Label Grid.Row="4" Grid.Column="0">Âge :</Label>
-        <Label Grid.Row="5" Grid.Column="0">Prix :</Label>
-        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Nom, Mode=TwoWay}"></TextBox>
-        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Genre, Mode=TwoWay}"></TextBox>
-        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Type, Mode=TwoWay}"></TextBox>
-        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Age, Mode=TwoWay}"></TextBox>
-        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Prix, Mode=TwoWay}"></TextBox>
+        <Label Grid.Row="3" Grid.Column="0">Âge :</Label>
+        <Label Grid.Row="4" Grid.Column="0">Prix :</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding FicheSelectionnee.Nom, Mode=TwoWay}"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding FicheSelectionnee.Genre, Mode=TwoWay}"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding FicheSelectionnee.Age, Mode=TwoWay}"></TextBox>
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding FicheSelectionnee.Prix, Mode=TwoWay}"></TextBox>
         <Rectangle Grid.Column="2" Grid.RowSpan="6" Fill="Black"></Rectangle>
-        <Label Grid.Row="1" Grid.Column="3" Content="{Binding Nom}"></Label>
-        <Label Grid.Row="2" Grid.Column="3" Content="{Binding Genre}"></Label>
-        <Label Grid.Row="3" Grid.Column="3" Content="{Binding Type}"></Label>
-        <Label Grid.Row="4" Grid.Column="3" Content="{Binding Age}"></Label>
-        <Label Grid.Row="5" Grid.Column="3" Content="{Binding Prix}"></Label>
+        <Label Grid.Row="1" Grid.Column="3" Content="{Binding FicheSelectionnee.Nom}"></Label>
+        <Label Grid.Row="2" Grid.Column="3" Content="{Binding FicheSelectionnee.Genre}"></Label>
+        <Label Grid.Row="3" Grid.Column="3" Content="{Binding FicheSelectionnee.Age}"></Label>
+        <Label Grid.Row="4" Grid.Column="3" Content="{Binding FicheSelectionnee.Prix}"></Label>
         <Button Click="Button_Click" Grid.ColumnSpan="5" Grid.Row="6">Remise à zéro</Button>
+        <Rectangle Grid.Column="5" Grid.RowSpan="6" Fill="Black"></Rectangle>
+        <Button Grid.Column="7" Grid.Row="1">Ajouter</Button>
+        <Button Grid.Column="7" Grid.Row="2">Retirer</Button>
+        <Button Grid.Column="7" Grid.Row="3">Editer</Button>
     </Grid>
 </Window>

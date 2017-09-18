@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameManagerMVVM
 {
-    public class Client : INotifyPropertyChanged
+    public class JV : INotifyPropertyChanged
     {
         private string nom;
         private string genre;
@@ -23,7 +23,7 @@ namespace GameManagerMVVM
 
             set
             {
-                if (value != nom)
+                if (value != nom) //si la valeur a été modifiée dans ce cas, je la met à jour et j'annonce que la valeur a été changée.
                 {
                     nom = value;
                     if (PropertyChanged != null)
@@ -43,21 +43,6 @@ namespace GameManagerMVVM
                     genre = value;
                     if (PropertyChanged != null)
                         PropertyChanged(this, new PropertyChangedEventArgs("Genre"));
-                }
-            }
-        }
-
-        public string Type
-        {
-            get { return type; }
-
-            set
-            {
-                if (value != type)
-                {
-                    type = value;
-                    if (PropertyChanged != null)
-                        PropertyChanged(this, new PropertyChangedEventArgs("Type"));
                 }
             }
         }
