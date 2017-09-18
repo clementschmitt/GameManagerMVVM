@@ -62,18 +62,19 @@
         <Label Grid.Row="4" Grid.Column="3" Content="{Binding FicheSelectionnee.Prix}"></Label>
         <Button Command="{Binding RemiseAZeroDeLaFicheSelectionnee}" CommandParameter="{Binding FicheSelectionnee}" Grid.ColumnSpan="5" Grid.Row="6">Remise à zéro</Button>
         <Rectangle Grid.Column="5" Grid.RowSpan="6" Fill="Black"></Rectangle>
-        <ListBox Grid.Column="6" Grid.RowSpan="5" Grid.Row="1" ItemsSource="{Binding Fiches}">
+        <ListBox x:Name="listeDeFichesJV"  Grid.Column="6" Grid.RowSpan="5" Grid.Row="1" ItemsSource="{Binding Fiches}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
+                        <Label Content="- "></Label>
                         <Label Content="{Binding Nom}"></Label>
                         <Label Content="{Binding Prix}"></Label>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Grid.Column="7" Grid.Row="1">Ajouter</Button>
-        <Button Grid.Column="7" Grid.Row="2">Retirer</Button>
-        <Button Grid.Column="7" Grid.Row="3">Editer</Button>
+        <Button Grid.Column="7" Grid.Row="1" Command="{Binding AjoutFicheJV}">Ajouter</Button>
+        <Button Grid.Column="7" Grid.Row="2" Command="{Binding RetraitFicheJV}" CommandParameter="{Binding ElementName=listeDeFichesJV, Path=SelectedItem}">Retirer</Button>
+        <Button Grid.Column="7" Grid.Row="3" Command="{Binding EditionFicheJV}" CommandParameter="{Binding ElementName=listeDeFichesJV, Path=SelectedItem}">Editer</Button>
     </Grid>
 </Window>

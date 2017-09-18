@@ -83,5 +83,45 @@ namespace GameManagerMVVM
             get { return remiseAZeroDeLaFicheSelectionnee; }
             
         }
+
+        private ICommand ajoutFicheJV;
+        private ICommand retraitFicheJV;
+        private ICommand editionFicheJV;
+
+        public ICommand AjoutFicheJV
+        {
+            get
+            {
+                if(ajoutFicheJV == null)
+                {
+                    ajoutFicheJV = new RelayCommand<Object>((obj) => Fiches.Add(new JV()));
+                }
+                return ajoutFicheJV;
+            }
+        }
+
+        public ICommand RetraitFicheJV
+        {
+            get
+            {
+                if (retraitFicheJV == null)
+                {
+                    retraitFicheJV = new RelayCommand<JV>((jv) => Fiches.Remove(jv));
+                }
+                return retraitFicheJV;
+            }
+        }
+
+        public ICommand EditionFicheJV
+        {
+            get
+            {
+                if (editionFicheJV == null)
+                {
+                    editionFicheJV = new RelayCommand<JV>((jv) => FicheSelectionnee = jv);
+                }
+                return editionFicheJV;
+            }
+        }
     }
 }
