@@ -11,7 +11,6 @@ namespace GameManagerMVVM
     {
         private string nom;
         private string genre;
-        private string type;
         private int age;
         private double prix;
         public event PropertyChangedEventHandler PropertyChanged;

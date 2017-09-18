@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace GameManagerMVVM
 {
@@ -67,6 +68,20 @@ namespace GameManagerMVVM
             };
 
             fiches.Add(FicheSelectionnee);
+        }
+
+        private ICommand remiseAZeroDeLaFicheSelectionnee = new RelayCommand<JV>((jv) =>
+        {
+            jv.Nom = "";
+            jv.Genre = "";
+            jv.Prix = 0;
+            jv.Age = 0;
+        });
+
+        public ICommand RemiseAZeroDeLaFicheSelectionnee
+        {
+            get { return remiseAZeroDeLaFicheSelectionnee; }
+            
         }
     }
 }

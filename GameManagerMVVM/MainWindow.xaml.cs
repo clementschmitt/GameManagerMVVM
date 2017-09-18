@@ -25,14 +25,6 @@ namespace GameManagerMVVM
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var c = (this.DataContext as JV);
-
-            c.Age = 0;
-            c.Prix = 0;
-            c.Genre = "";
-            c.Nom = "";
-        }
+       
     }
 }
