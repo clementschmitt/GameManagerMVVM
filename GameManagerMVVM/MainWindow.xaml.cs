@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PremiereUtilisationDataContext
+namespace GameManagerMVVM
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -23,6 +23,17 @@ namespace PremiereUtilisationDataContext
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var c = (this.DataContext as Client);
+
+            c.Age = 0;
+            c.Nom = "";
+            c.Prix = 0;
+            c.Type = "";
+            c.Genre = "";
         }
     }
 }

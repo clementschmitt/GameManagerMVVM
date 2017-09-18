@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PremiereUtilisationDataContext.Properties
+namespace GameManagerMVVM.Properties
 {
 
 

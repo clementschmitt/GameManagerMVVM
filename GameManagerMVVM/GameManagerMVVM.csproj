@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD7FC2D9-F89F-4921-B2E5-0E694C117EE8}</ProjectGuid>
+    <ProjectGuid>{1AEBCE02-C3B3-4571-A704-3412AD5C14B7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PremiereUtilisationDataContext</RootNamespace>
-    <AssemblyName>PremiereUtilisationDataContext</AssemblyName>
+    <RootNamespace>GameManagerMVVM</RootNamespace>
+    <AssemblyName>GameManagerMVVM</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

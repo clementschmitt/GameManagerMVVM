@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PremiereUtilisationDataContext.Properties
+namespace GameManagerMVVM.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace PremiereUtilisationDataContext.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PremiereUtilisationDataContext.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GameManagerMVVM.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

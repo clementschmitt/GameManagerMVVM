@@ -4,18 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PremiereUtilisationDataContext
+namespace GameManagerMVVM
 {
     public class Client
     {
         private string nom;
-        private string prenom;
-        private string sexe;
+        private string genre;
+        private string type;
         private int age;
+        private double prix;
 
         public string Nom { get => nom; set => nom = value; }
-        public string Prenom { get => prenom; set => prenom = value; }
-        public string Sexe { get => sexe; set => sexe = value; }
+        public string Genre { get => genre; set => genre = value; }
+        public string Type { get => type; set => type = value; }
         public int Age { get => age; set => age = value; }
+        public double Prix { get => prix; set => prix = value; }
     }
 }
