@@ -30,10 +30,10 @@ namespace GameManagerMVVM
             var c = (this.DataContext as Client);
 
             c.Age = 0;
-            c.Nom = "";
             c.Prix = 0;
             c.Type = "";
             c.Genre = "";
+            c.Nom = "";
         }
     }
 }
